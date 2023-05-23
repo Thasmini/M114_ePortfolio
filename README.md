@@ -269,3 +269,4 @@ IP-Adresse: Geräte in einem Netzwerk eindeutig zu identifizieren. Die ersten be
 
 
 ## 1.3 Reflexion
+Das Modul hat ganz einfach begonnen. Heute haben wir die Zahlensysteme angeschaut. Wir hatten das schn mal, aber nicht so vertieft. Ausserdem hat mir die Aufgabe mit dem Schach sehr gefallen, weil wir eine ganz einfache Java Programm schreiben durften. Leider konnte ich nicht alle Aufgaben fertig lösen. Es waren zu viele aufs Mal. Aber die aufgaben waren schon interessant und lehrreich. Dennoch hätte ich gerne mehr Zeit bekommen, um die Aufgaben zu erledigen.
