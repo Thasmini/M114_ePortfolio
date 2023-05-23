@@ -20,9 +20,8 @@ Inhalt
 ### 1.1.0 Begriffe
 - Hex-Editor: Ein Hex-Editor ist ein spezielles Computerprogramm, mit dem Benutzer binäre Daten auf einer niedrigen Ebene anzeigen und bearbeiten können, indem sie den Inhalt einer Datei oder eines Speicherbereichs in Hexadezimaldarstellung betrachten und verändern.
 
-### 1.1.1 Zahlensysteme
-- Begriffe: Zehner, Binär/Dual, Oktal, Hexadecimal
-
+### 1.1.1 Zahlensysteme, numerische Codes
+    Lernziele: Bit/Byte; Massvorsätze k,M,G,T; Zahlensysteme BIN/HEX; 2er Komplement; Dataoverflow; Fliesskommazahl; Parallel; Seriell; Bustakt Hz
 
   1. Binärsystem/Dualsystem: (Basis 2) <br> (Ziffern 0 und 1)  Es wird oft in der Informatik und Elektronik verwendet, da digitale Geräte Informationen in Form von Nullen und Einsen verarbeiten.
 
@@ -34,6 +33,8 @@ Inhalt
 
 
 ## 1.2 Arbeitsaufträge
+URL: https://gitlab.com/ch-tbz-it/Stud/m114/-/tree/main/A.%20Daten%20codieren/A.1%20Zahlensysteme%2C%20numerische%20Codes
+
   ### 1.2.0 Begriffe
   Schach: Brettspiel für zwei Personen, die mit je sechzehn schwarzen bzw. weißen Schachfiguren
   ### 1.2.1 Schachbrett
@@ -268,5 +269,89 @@ Die Bitkombination "1100 0000 . 1010 1000 . 0100 1100 . 1101 0011" entspricht al
 IP-Adresse: Geräte in einem Netzwerk eindeutig zu identifizieren. Die ersten beiden Oktette (192.168) identifizieren normalerweise das lokale Netzwerk, während die letzten beiden Oktette (76.211) ein spezifisches Gerät innerhalb des Netzwerks identifizieren.
 
 
+
 ## 1.3 Reflexion
 Das Modul hat ganz einfach begonnen. Heute haben wir die Zahlensysteme angeschaut. Wir hatten das schn mal, aber nicht so vertieft. Ausserdem hat mir die Aufgabe mit dem Schach sehr gefallen, weil wir eine ganz einfache Java Programm schreiben durften. Leider konnte ich nicht alle Aufgaben fertig lösen. Es waren zu viele aufs Mal. Aber die aufgaben waren schon interessant und lehrreich. Dennoch hätte ich gerne mehr Zeit bekommen, um die Aufgaben zu erledigen.
+
+
+
+
+# Tag 2 [23.05.2023]
+
+## 2.1 Theorie
+- Negative (ganze)Zahlen: (heisst Zahlen Bitweise negieren)
+4 bit 0010 = 2  
+
+2er Komplement: (Wie man Zahl negativ macht)
+1. Zahl negieren ; 1101
+2. +1 addieren ; 1110 (-2) //1110 positive wäre 14, wenn man mit signed integer arbeitet, so kann man die negative Zahl verwenden
+
+- Speicher (Arbeitspeicher): 
+  ![Alt text](/Media/Arbeitsspeicher.png)
+
+- Codierung: hexed.it
+- ASCII
+- UNICode
+### 2.1.0 Begriffe
+- Wireshark: weit verbreitetes Open-Source-Netzwerkanalysewerkzeug und ermöglicht Benutzern das Erfassen und Überwachen des Netzwerkverkehrs in Echtzeit. 
+  
+- OSI-Layer2 (Data Link Layer): st und  der zweite Layer im OSI-Referenzmodell für Netzwerkkommunikation liegt direkt über dem Physical Layer und ist für die Übertragung von Daten zwischen direkt verbundenen Geräten in einem lokalen Netzwerk verantwortlich
+
+### 2.1.1 Alphanumerische Codes ASCII und Unicode
+
+
+
+
+## 2.2 Arbeitsaufträge
+Drei Textdateien: Textsample1, Textsample2 und Textsample3 unter AlphanumerischeCodes
+Eine der Dateien ist in ASCII codiert, die andere in UTF-8 und die dritte in UTF-16.
+
+- Welche der Dateien ist nun ASCII-codiert, welche UTF-8 und welche UTF-16 BE-BOM?
+Textsample1 = ASCII-codiert
+Textsample2 = UTF-8
+Textsample3 = UTF-16 BE-BOM
+
+- Alle drei Dateien enthalten denselben Text. Aus wie vielen Zeichen besteht dieser?
+64 Zeichen
+
+- Was sind die jeweiligen Dateigrössen? (Beachten sie, dass unter Grösse auf Datenträger jeweils 0 Bytes angegeben wird. Dies darum, weil beim Windows-Dateisystem NTFS kleine Dateien direkt in die MFT (Master File Table) geschrieben werden.) Wie erklären sie sich die Unterschiede?
+Textsample1 = 68 Bytes
+Textsample2 = 71 Bytes
+Textsample3 = 138 Bytes
+
+1. ASCII-Codierung:
+   ASCII ist eine 7-Bit-Codierung, die nur die ersten 128 Zeichen des Unicode-Zeichensatzes abdeckt. Ein ASCII-Textfile besteht aus einer Sequenz von 8-Bit-Bytes, wobei jedes Byte nur die unteren 7 Bits für das Zeichen verwendet und das höchste Bit auf Null gesetzt wird.
+
+2. UTF-8-Codierung:
+   UTF-8 ist eine variable Längen-Codierung für Unicode-Zeichen. Es verwendet ein Byte, um ASCII-Zeichen darzustellen, und verwendet mehrere Bytes für nicht-ASCII-Zeichen.
+
+3. UTF-16BE-BOM-Codierung:
+   UTF-16 ist eine Codierung, bei der jedes Zeichen standardmässig 16 Bits (2 Bytes) belegt. UTF-16BE steht für Big-Endian und UTF-16 BOM beinhaltet das sogenannte Byte Order Mark, das am Anfang der Datei platziert wird, um die Byte-Reihenfolge anzugeben. Die Dateigröße einer UTF-16BE-BOM-codierten Datei ist generell größer als bei ASCII und UTF-8, da jedes Zeichen mehr Speicherplatz benötigt. 
+
+- Bei den weiteren Fragen interessieren uns nur noch die ASCII- und die UTF-8-Datei: Bekanntlich ist UTF-8 in den ersten 128 Zeichen deckungsgleich mit ASCII. Untersuchen sie nun die beiden HEX-Dumps und geben sie an, welche Zeichen unterschiedlich codiert sind. Ein kleiner Tipp: Es sind deren zwei.
+//TODO
+
+- Was bedeuten die beiden Ausdrücke, denen wir z.B. bei UTF-16 begegnen: Big-Endian (BE), Little-Endian (LE)?
+
+Big-Endian (BE): das höchstwertige (signifikanteste) Byte zuerst gespeichert, gefolgt von den niedrigerwertigen (weniger signifikanten) Bytes.
+
+Little-Endian (LE): das niederwertigste (weniger signifikante) Byte zuerst gespeichert, gefolgt von den höherwertigen (signifikanteren) Bytes. 
+
+-
+### 2.2.2 Zahlensysteme - Reloaded
+... 
+7. OSI-Layer2 mit Wireshark untersuchen:
+   Bitkombination: 1011 1110 - 1000 0011 -  1000 0101 - 1101 0101 - 1110 0100 - 1111 1110
+
+1011 1110 -> BE
+1000 0011 -> 83
+1000 0101 -> 85
+1101 0101 -> D5
+1110 0100 -> E4
+1111 1110 -> FE
+
+Also erhalten wir die MAC-Adresse: BE:83:85:D5:E4:FE
+
+
+## 2.3 Reflexion
+Heute haben wir viele Inputs von unserem Lehrer erhalten. Wir gingen tief in einige Themen ein und mussten auch etwas Mathematik mit ihm machen. Fand ich noch recht lustig. Zur Beginn hatte ich Probleme beim Lösen der Aufgabe, weil ich viel zu lange für die jeweiligen Aufgabe brauchte. Aber heute war ein lehrreicher Tag. Wir haben einiges dazu gelernt.
