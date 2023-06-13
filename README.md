@@ -355,3 +355,109 @@ Also erhalten wir die MAC-Adresse: BE:83:85:D5:E4:FE
 
 ## 2.3 Reflexion
 Heute haben wir viele Inputs von unserem Lehrer erhalten. Wir gingen tief in einige Themen ein und mussten auch etwas Mathematik mit ihm machen. Fand ich noch recht lustig. Zur Beginn hatte ich Probleme beim Lösen der Aufgabe, weil ich viel zu lange für die jeweiligen Aufgabe brauchte. Aber heute war ein lehrreicher Tag. Wir haben einiges dazu gelernt.
+
+
+
+
+# Tag 3 [30.05.2023]
+
+## 3.1 Theorie
+- Farbe:
+    - Elektromagnetische Wellen werden mit der Wellenlänge oder der Frequenz angegeben.
+    - Licht besteht aus elektromagnetischen Wellen.
+    - Nur ein Teil der Frequenzen des Lichts sind für das menschliche Auge sichtbar.
+- Farbmodelle 
+- Bild auf dem Laptop ist ein additives FArbsystem RGB (Akhv)
+- Bild auf dem Papier isz ein subtraktives Farbsystem(Myk passive)
+
+VLC (Variable Length Coding)
+    Link: https://gitlab.com/ch-tbz-it/Stud/m114/-/tree/main/B.%20Daten%20komprimieren/B.1%20Verlustlose%20Komprimierung
+
+  - Morsecode
+    Der Morsecode wurde im Jahr 1838 von Samuel Morse und Alfred Lewis Vail erfunden. Er dient als Kommunikationsverfahren, um Buchstaben, Zahlen und andere Zeichen in Seefunk und Telegrafie elektrisch, optisch oder akustisch zu übermitteln. Der Morsecode kann entweder als Codetabelle oder als binärer Baum dargestellt werden.
+
+    ![Alt text](/Media/morsecode.jpg)
+
+    Ein Nachteil des Morsecodes besteht darin, dass es ohne spezielles Trennzeichen oder Delimiter (z. B. eine kurze Pause) oft zu Missverständnissen kommen kann, da es nicht eindeutig ist, wo ein Zeichen beginnt und endet. Dieses Problem tritt bei der Huffman-Kodierung nicht auf, da dort die Regel gilt, dass kein Codewort den Anfang eines anderen Codewortes darstellen darf.
+
+    Die gegebene Codesequenz "..-....-" kann verschiedene Bedeutungen haben, wie zum Beispiel "IDEA" (I=.. D=-.. E=. A=-.), "USA" (U=..- S=... A=-.) oder "UHT" (U=..- H=.... T=-). Es könnte aber auch für einen Fussballverein "FV" stehen (F=..-. V=...-). Daher ist der Morsecode nicht eindeutig und kann zu Verwirrungen führen.
+
+
+  - Der Huffmancode
+    Der Huffman-Code ist ein Verfahren zur verlustlosen Komprimierung von Daten. Er wurde von David A. Huffman im Jahr 1952 entwickelt. Der Code basiert auf einer Variante des binären Baums und verwendet eine unterschiedliche Anzahl von Bits, um verschiedene Zeichen darzustellen. Dabei werden häufig auftretende Zeichen mit weniger Bits codiert, während weniger häufig auftretende Zeichen mit mehr Bits codiert werden.
+
+    ![Alt text](/Media/Huffmancode.jpg)
+
+    Der Vorteil des Huffman-Codes besteht darin, dass er effizient ist und eine gute Kompressionsrate bietet. Durch die Verwendung eines speziellen Algorithmus kann der Huffman-Code so gestaltet werden, dass kein Codewort den Anfang eines anderen Codewortes darstellt. Dadurch wird eine eindeutige Entschlüsselung gewährleistet, ohne dass Trennzeichen oder Delimiter benötigt werden.
+
+
+### 3.1.0 Begriffe
+- CMYK
+- Vectorielle Grafiken
+- DPI und PPI im Multimediabereich
+
+### 3.1.1 Farbcodierung RGB/ CMYK
+#FF0000 entspricht der Farbe Rot.
+#00FF00 entspricht der Farbe Grün.
+#0000FF entspricht der Farbe Blau.
+#FFFF00 entspricht der Farbe Gelb.
+#00FFFF entspricht der Farbe Cyan.
+#FF00FF entspricht der Farbe Magenta.
+#000000 entspricht der Farbe Schwarz.
+#FFFFFF entspricht der Farbe Weiß.
+#00BC00 entspricht der Farbe Dunkelgrün.
+
+C:0%, M:100%, Y:100%, K:0% entspricht der Farbe Magenta.
+C:100%, M:0%, Y:100%, K:0% entspricht der Farbe Gelb.
+C:100%, M:100%, Y:0%, K:0% entspricht der Farbe Cyan.
+C:0%, M:0%, Y:100%, K:0% entspricht der Farbe Blau.
+C:100%, M:0%, Y:0%, K:0% entspricht der Farbe Rot.
+C:0%, M:100%, Y:0%, K:0% entspricht der Farbe Grün.
+C:100%, M:100%, Y:100%, K:0% entspricht der Farbe Weiß.
+C:0%, M:0%, Y:0%, K:100% entspricht der Farbe Schwarz.
+C:0%, M:0%, Y:0%, K:0% entspricht der Farbe Transparent.
+C:0%, M:46%, Y:38%, K:22% entspricht der Farbe Dunkelbraun.
+
+RGB 255/255/255 in YCbCr ergibt: Y: 1,Cb: 0,Cr: 0
+RGB 0/0/0 in YCbCr ergibt:Y: 0,Cb: 0.Cr: 0
+Y:1, Cb:0, Cr:0 entspricht der Farbe Weiß.
+Y:0, Cb:0, Cr:0 entspricht der Farbe Schwarz.
+Y:0, Cb:1, Cr:0 entspricht der Farbe Blau.
+Y:0, Cb:-1, Cr:0 entspricht der Farbe Gelb.
+Y:0, Cb:0, Cr:1 entspricht der Farbe Rot.
+Y:0, Cb:0, Cr:-1 entspricht der Farbe Cyan.
+Y:0.3, Cb:0.5, Cr:-0.17 entspricht einer bestimmten Farbe im YCbCr-Farbraum. 
+
+
+
+## 3.2 Arbeitsaufträge
+
+### Matterhorn Bildkomprimierung
+Originalbild:
+    ![Alt text](/Media/matterhorn.jpg)
+Komprimiertes Bild:
+    ![Alt text](/Media/matterhorn_komprimiert.jpg)
+
+## 3.3 Reflexion
+DieseUnterrichtslektion war etwas streysig, weil ich mich nicht konzentrieren konnte. Das lag daran, dass wir die Prüfung in der 4 Lektion schreiben mussten. Ich wurde nervös.Ansonsten haben wir wieder mal einiges neu dazu gelernt.
+
+
+
+# Tag 4 [06.06.2023]
+
+## 4.1 Theorie
+
+
+### 4.1.0 Begriffe
+
+### 4.1.1 Farbcodierung RGB/ CMYK
+
+
+
+
+## 4.2 Arbeitsaufträge
+
+
+
+
+## 4.3 Reflexion
