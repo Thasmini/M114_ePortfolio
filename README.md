@@ -439,18 +439,132 @@ Komprimiertes Bild:
     ![Alt text](/Media/matterhorn_komprimiert.jpg)
 
 ## 3.3 Reflexion
-DieseUnterrichtslektion war etwas streysig, weil ich mich nicht konzentrieren konnte. Das lag daran, dass wir die Prüfung in der 4 Lektion schreiben mussten. Ich wurde nervös.Ansonsten haben wir wieder mal einiges neu dazu gelernt.
+Diese Unterrichtslektion war etwas streysig, weil ich mich nicht konzentrieren konnte. Das lag daran, dass wir die Prüfung in der 4 Lektion schreiben mussten. Ich wurde nervös.Ansonsten haben wir wieder mal einiges neu dazu gelernt.
 
 
 
 # Tag 4 [06.06.2023]
 
 ## 4.1 Theorie
+## RLC (Run Length Coding) bzw. RLE (Run Length Encoding)
+Es geht um Datenkomprimierung. Sie basiert auf der Idee, dass aufeinanderfolgende gleiche Datenwerte durch einen einzigen Wert und seine Länge dargestellt werden können.
 
+Beispiel: [AAAABBBCCDAA] Bei der Anwendung von RLC wird diese in folgende Darstellung umgewandelt: (A, 4), (B, 3), (C, 2), (D, 1), (A, 2).
+
+Die RLC-Kodierung ist besonders effektiv, wenn die Eingabesequenz viele aufeinanderfolgende gleiche Zeichen enthält.
+
+## Lexikalisches Verfahren LZW (Lempel-Ziv-Welch-Algorithmus)
+Der LZW-Algorithmus basiert auf der Idee, wiederholende Muster in der Eingabesequenz zu erkennen und sie durch kürzere Codewörter zu ersetzen.
+
+Selbstverständlich! Hier ist ein Beispiel, wie der LZW-Algorithmus auf eine Eingabesequenz angewendet werden könnte:
+
+Eingabesequenz: "ABABABAABABA"
+
+Schritt 1: Initialisierung des Wörterbuchs mit einzelnen Zeichen des Eingabealphabets:
+- Wörterbuch: {'A': 0, 'B': 1, ...}
+
+Schritt 2: Lesen des ersten Zeichens aus der Eingabesequenz:
+- Aktuelles Muster: 'A'
+
+Schritt 3: Schleife zur Verarbeitung der restlichen Eingabesequenz:
+
+- Lesen des nächsten Zeichens: 'B'
+- Hinzufügen des Zeichens zum aktuellen Muster: 'AB'
+- Überprüfen, ob 'AB' im Wörterbuch vorhanden ist:
+  - Nicht vorhanden, also füge ('AB', 2) zum Wörterbuch hinzu.
+  - Gib das Codewort des vorherigen Musters ('A') aus: 0
+  - Setze das aktuelle Muster auf 'B'.
+
+- Lesen des nächsten Zeichens: 'A'
+- Hinzufügen des Zeichens zum aktuellen Muster: 'BA'
+- Überprüfen, ob 'BA' im Wörterbuch vorhanden ist:
+  - Nicht vorhanden, also füge ('BA', 3) zum Wörterbuch hinzu.
+  - Gib das Codewort des vorherigen Musters ('B') aus: 1
+  - Setze das aktuelle Muster auf 'A'.
+
+- Lesen des nächsten Zeichens: 'B'
+- Hinzufügen des Zeichens zum aktuellen Muster: 'AB'
+- Überprüfen, ob 'AB' im Wörterbuch vorhanden ist:
+  - Vorhanden mit dem Codewort 2.
+  - Setze das aktuelle Muster auf 'ABA'.
+
+- Lesen des nächsten Zeichens: 'B'
+- Hinzufügen des Zeichens zum aktuellen Muster: 'BAB'
+- Überprüfen, ob 'BAB' im Wörterbuch vorhanden ist:
+  - Nicht vorhanden, also füge ('BAB', 4) zum Wörterbuch hinzu.
+  - Gib das Codewort des vorherigen Musters ('ABA') aus: 2
+  - Setze das aktuelle Muster auf 'B'.
+
+- Lesen des nächsten Zeichens: 'A'
+- Hinzufügen des Zeichens zum aktuellen Muster: 'BA'
+- Überprüfen, ob 'BA' im Wörterbuch vorhanden ist:
+  - Vorhanden mit dem Codewort 3.
+  - Setze das aktuelle Muster auf 'ABA'.
+
+- Lesen des letzten Zeichens: 'B'
+- Hinzufügen des Zeichens zum aktuellen Muster: 'BAB'
+- Überprüfen, ob 'BAB' im Wörterbuch vorhanden ist:
+  - Vorhanden mit dem Codewort 4.
+  - Gib das Codewort des vorherigen Musters ('ABA') aus: 2
+
+Schritt 4: Gib das Codewort des aktuellen Musters ('BAB') aus: 4
+
+Die Ausgabe des LZW-Algorithmus für die Eingabesequenz "ABABABAABABA" wäre: 0, 1, 2, 3, 4.
 
 ### 4.1.0 Begriffe
+- Komprimierung (Verlustlos)
+    - Huffman: Binarytree
+    - RLC/E
+    - ZLW
+    - BûrowsWheeler
 
-### 4.1.1 Farbcodierung RGB/ CMYK
+- Komprimierung (Verlustbehaftet
+    - Multimedia
+    - JPG DCT
+    - weiter Verfahren)
+
+### 4.1.1 
+- Huffman-Algorithmus:
+  Code-Tabelle
+M-2: 0
+I-2: 10
+U-1: 110
+L-1: 1110
+T-1: 11110
+E-1: 111110
+D-1: 1111110
+A-1: 1111111
+
+    ![Alt text](/Media/huffman_aufgabe.png)
+
+Häufigkeit der Buchstabe: M-2, U-1, L-1, T-1, I-2, E-1, D-1, A-1
+
+Wort = Multimedia
+
+- RLC/E-Verfahren: 
+  RL-Code: 010100011110010010010010010010010010010110010110010010010010010010010010001
+
+Grafik:
+   W  B  W  B  W  B  W  B
+   W  B  W  B  W  B  W  B
+   W  B  W  B  W  B  W  B
+   W  B  W  B  W  B  W  B
+   W  B  W  B  W  B  W  B
+   W  B  W  B  W  B  W  B
+   W  B  W  B  W  B  W  B
+   W  B  W  B  W  B  W  B
+
+w = weiss
+b = black
+QUADRAT
+
+- LZW-Verfahren: 
+ a)  Wort «ANANAS» 
+
+ b) «ERDBE<256>KL<260>» zu dekomprimieren.
+
+ - BWT (Burrows-Wheeler-Transformation)
+
 
 
 
