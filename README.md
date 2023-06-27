@@ -565,13 +565,85 @@ QUADRAT
 
  - BWT (Burrows-Wheeler-Transformation)
 
-
-
-
-
 ## 4.2 Arbeitsaufträge
 
 
 
 
-## 4.3 Reflexion
+## 5.3 Reflexion
+
+# Tag 5 [13.06.2023]
+
+## 5.1 Theorie
+## RLC (Run Length Coding) bzw. RLE (Run Length Encoding)
+
+
+## Lexikalisches Verfahren LZW (Lempel-Ziv-Welch-Algorithmus)
+
+### 5.1.0 Begriffe
+
+
+### 5.1.1 
+
+## 5.2 Arbeitsaufträge
+
+
+## 5.3 Reflexion
+
+
+## 5.3 Reflexion
+
+
+
+# Tag 6 [20.06.2023]
+https://www.cryptool.org/de/cto/
+Wir haben Animationen von den Verfahren angeschaut.
+## 6.1 Theorie
+
+
+
+### 6.1.0 Begriffe
+- Vigenère-Chiffre: ist eine polyalphabetische Substitution, die auf einem Schlüsselwort basiert. 
+Sie verwendet mehrere Caesar-Verschiebungen, um Nachrichten zu verschlüsseln und zu entschlüsseln.
+
+- XOR (Exclusive OR) ist ein logischer Operator, der in der Kryptographie und Signalverarbeitung verwendet wird. Er führt eine bitweise Operation auf zwei Eingabebits aus und gibt ein Ausgabebit zurück. XOR wird für Verschlüsselung, Fehlererkennung und digitale Schaltungen eingesetzt.
+
+
+
+### 6.1.1 
+
+## 6.2 Arbeitsaufträge
+
+
+## 6.3 Reflexion
+
+
+
+# Tag 7 [27.06.2023]
+
+## 7.1 Theorie
+  - Schlüsseltausch: Beim symmetrischen Verschlüsselungsverfahren wird für Ver- und Entschlüsselung derselbe Schlüssel verwendet. Der sichere Schlüsseltausch zwischen den Kommunikationspartnern kann durch den Einsatz von asymmetrischer Verschlüsselung oder physischen Treffen erfolgen, um den Schlüssel persönlich auszutauschen. Der Schlüsseltausch ist wichtig, um die Vertraulichkeit und Integrität der verschlüsselten Daten zu gewährleisten.
+  Nachteil 1 = Um so mehr Teilnehmer desto mehr Schlüssel. Nicht linear, sondern quadratisch. 
+  Nachteil 2 = Schlüsselaustausch, also soll man private- und öffentliche Schlüssel haben.
+
+  Anz. Schlüssel: Teilnmehmer mal (Teilnehmer - 1)/ 2
+  Formel binomialkoeffizient:  https://d1g9li960vagp7.cloudfront.net/wp-content/uploads/2019/10/Binomialkoeffizient-Formel-neu-1024x576.jpg
+
+  z.B. AP21b hat 22 Lehrlinge. 22 mal 21 durch 2 = 231
+                500 Menschen = 500 mal 499 durch 2 = 124'750
+
+# Hybride Verfahren
+
+
+### 7.1.0 Begriffe
+ 
+
+### 7.1.1 
+
+## 7.2 Arbeitsaufträge
+1. Diffie-Hellman: ![Alt text](/Media/Diffie-Hellman.png)
+2. RSA-Verschlüsselung:  ![Alt text](/Media/schlusselpaare.png) ![Alt text](/Media/rsa-entschlusselung.png)
+3. RSA-Demo: ![Alt text](/Media/rsa-demo.png)
+4. RSA-AES: ![Alt text](/Media/hybrid.png)
+
+## 7.3 Reflexion
