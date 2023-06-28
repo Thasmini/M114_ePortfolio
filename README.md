@@ -641,9 +641,13 @@ Sie verwendet mehrere Caesar-Verschiebungen, um Nachrichten zu verschlüsseln un
 ### 7.1.1 
 
 ## 7.2 Arbeitsaufträge
+# Symmetrisch
 1. Diffie-Hellman: ![Alt text](/Media/Diffie-Hellman.png)
 2. RSA-Verschlüsselung:  ![Alt text](/Media/schlusselpaare.png) ![Alt text](/Media/rsa-entschlusselung.png)
 3. RSA-Demo: ![Alt text](/Media/rsa-demo.png)
 4. RSA-AES: ![Alt text](/Media/hybrid.png)
 
+# Hashwert
+![Alt text](hashdemo.png)
 ## 7.3 Reflexion
+Diese Woche haben wir über Schlüssel geredet. Damit ist private und public key gemeint. 
